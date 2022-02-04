@@ -1,0 +1,6 @@
+plot(emissions$CO2 ~ emissions$GDP)
+model <- lm(emissions$CO2 ~ emissions$GDP)
+abline(model)
+identify(emissions$GDP, emissions$CO2)
+model.clean <- lm(emissions[-1,]$CO2 ~ emissions[-1,]$GDP)
+abline(model.clean, col = "Blue")

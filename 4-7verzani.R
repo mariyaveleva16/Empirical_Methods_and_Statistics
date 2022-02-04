@@ -1,0 +1,6 @@
+cor(wt, age)
+cor(rank(wt), rank(age))
+cor(wt, ht)
+cor(rank(wt), rank(ht))
+simple.lm(wt, age)
+simple.lm(wt, ht)

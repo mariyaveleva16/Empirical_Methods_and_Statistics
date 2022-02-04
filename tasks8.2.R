@@ -1,0 +1,8 @@
+#NegBi(n=3, p=0.2)
+#a)8 shots => 5 not P(x=5)
+dbinom(5, size = 3, prob = 0.2)
+#b)more than 6 shots => more than 3 not P(x>3)=1-P(x<=3)
+1-pnbinom(3, size = 3, prob = 0.2)
+pnbinom(3, size = 3, prob = 0.2, lower.tail = FALSE)
+#c)x in [5;8] shots => [2;5] not P(x<=5)-P(x<=1)
+pnbinom(5, size = 3, prob = 0.2) - pnbinom(1, size = 3, prob = 0.2)
